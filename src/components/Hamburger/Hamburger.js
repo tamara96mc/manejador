@@ -16,6 +16,7 @@ export default function Hamburger({ isOpen }){
                     flex-flow: column nowrap;
                     z-index: 10;
                     background-color: #ff6373;
+                
                 }
                 .burger{
                     width: 2rem;
