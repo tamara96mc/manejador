@@ -45,7 +45,7 @@ const Header = (props) => {
             <style jsx>{`
 
         .header{
-
+        background-color:#008080;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -53,7 +53,7 @@ const Header = (props) => {
         }
 
         .navigation{
-         background-color:#008080;
+        background-color:#008080;
         width: 100%;
         height: 4em;
         display: flex;
@@ -69,6 +69,7 @@ const Header = (props) => {
        justify-content: space-between;
         align-items: center;
         overflow: hidden;
+        width: 45em;
         }
         .navigation ul li{
         list-style-type: none;
@@ -84,6 +85,8 @@ const Header = (props) => {
     @media (max-width: 923px){
 
         .hamburger1{
+        background-color:#008080;
+        width: 12em;
         display:flex;
         z-index: 6;
         }
@@ -92,20 +95,20 @@ const Header = (props) => {
         display: ${hamburgerOpen ? 'flex' : 'none'};
         background-color: #008080;
         height: 100%;
-        width: 20%;
+        width: 15em;
         position: fixed;
         top: 0;
         right: 0;
         flex-direction: column;
-       justify-content: center;
+        justify-content: center;
         align-items: center;
 
         }
 
-    //     .navigation ul li{
-    //         list-style-type: none;
-    //        margin:0.5em;
-    // }
+        .navigation ul li{
+        list-style-type: none;
+           margin:0.5em;
+    }
 `}</style>
         </div>
     )
