@@ -14,13 +14,22 @@ const DropdownM = () => {
       value: "clientes",
     },
     {
-      label: "Contextos",
-      value: "Contextos",
+      label: "Proyectos",
+      value: "proyectos",
     },
     {
-      label: "Mensajes",
-      value: "Mensajes",
-    },
+      label: "Campos",
+      value: "campos",
+    }
+    // ,
+    // {
+    //   label: "Contextos",
+    //   value: "Contextos",
+    // },
+    // {
+    //   label: "Mensajes",
+    //   value: "Mensajes",
+    // },
   ];
 
 

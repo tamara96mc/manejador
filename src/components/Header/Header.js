@@ -22,20 +22,23 @@ const Header = (props) => {
                     <li>
                         <DropdownM />
                     </li>
-                    <li>
-                        <Button destino="Jiras" url="/" />
-                    </li>
-                    <li>
+                    {/* <li>
                         <DropdownJ />
+                    </li> */}
+                    <li>
+            
                     </li>
                     <li>
-                        <Button destino="LogIn" url="/" />
+            
                     </li>
                     <li>
-                        <Button destino="SingUp" url="/" />
+                        <Button destino="LogIn" url="/login" />
                     </li>
                     <li>
-                        <Button destino="User" url="/" />
+                        <Button destino="SingUp" url="/register" />
+                    </li>
+                    <li>
+                        <Button destino="User" url="/profile" />
                     </li>
                 </ul>
             </div>
@@ -85,8 +88,7 @@ const Header = (props) => {
     @media (max-width: 923px){
 
         .hamburger1{
-        background-color:#008080;
-        width: 12em;
+        width: 7em;
         display:flex;
         z-index: 6;
         }
@@ -95,10 +97,11 @@ const Header = (props) => {
         display: ${hamburgerOpen ? 'flex' : 'none'};
         background-color: #008080;
         height: 100%;
-        width: 15em;
+        width: 8em;
         position: fixed;
         top: 0;
         right: 0;
+        margin-top:1em;
         flex-direction: column;
         justify-content: center;
         align-items: center;

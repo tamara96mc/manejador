@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import useForm from "../../functions/hooks/useFormRegister";
+import useForm from "../../functions/hooks/useFromRegister";
 import { validateSignUp } from "../../functions/hooks/validateInput";
-
 
 const Register = () => {
 
@@ -14,25 +13,28 @@ const Register = () => {
     const submit = async () => {
 
 
-        try {
-            debugger;
-             let res = await axios.post("https://api-tmc-pelis.herokuapp.com/api/signup", values);
-            setmsgError("Usuario registrado con éxito.");
-            setTimeout(() => {
-                history("/login");    
-            }, 2000);
+        // try {
+        //     debugger;
+        //      let res = await axios.post("https://api-tmc-pelis.herokuapp.com/api/signup", values);
+        //     setmsgError("Usuario registrado con éxito.");
+        //     setTimeout(() => {
+        //         history("/login");    
+        //     }, 2000);
             
-        } catch (error) {
-            //console.log(res.msg);
-            console.log(error);
-            setmsgError("Usuario no registrado.");
-        }
+        // } catch (error) {
+        //     //console.log(res.msg);
+        //     console.log(error);
+        //     setmsgError("Usuario no registrado.");
+        // }
     };
 
     const { handleChange, handleSubmit, values, errors } = useForm(submit, validateSignUp);
 
 
     return (
+
+        <div className="basics_column">
+
         <div className="form">
             <h3>Registro</h3>
             <div className="form-group">
@@ -40,7 +42,7 @@ const Register = () => {
                 <input
                     name="name"
                     type="text"
-                    placeholder="Nombre y apellidos"
+                    placeholder="Nombre completo"
                     value={values.name || ''}
                     onChange={handleChange}
                 />
@@ -69,6 +71,7 @@ const Register = () => {
             <div className="info">{msgError}</div>
             <div className="send-button" onClick={handleSubmit}>Registrar</div>
 
+        </div>
         </div>
     )
 };

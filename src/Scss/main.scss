@@ -1,12 +1,16 @@
 $colRoj1 : rgb(187, 0, 14);
 $colRoj2 : rgb(227, 28, 37);
-$colRoj3 : rgb(240, 49, 59);
+$colRosa3 : #ff6373;
 
-$colNegro1 : rgb(23, 24, 23);
-$colNegro3 : rgb(32, 32, 32);
-$colNegro4 : rgb(92, 95, 92);
-$colNegro5 : rgb(148, 150, 148);
-$colBlanco1 : rgb(241, 224, 223);
+$colAzul: #008080;
+
+
+
+$colNegro1 : black;
+$colNegro2 : rgb(44, 44, 43);
+$colNegro3 : #4e4e4e;
+$colNegro4 : rgb(148, 150, 148);
+$colBlanco1 : #f7f3f3;
 
 .basics_column {
     display: flex;
@@ -66,13 +70,17 @@ $colBlanco1 : rgb(241, 224, 223);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4em;
+    width: 40%;
+    height: 60%;
+    margin: 2em;
+    padding: 1em;
+    background-color: $colAzul;
   
     .form-group{
         margin: 1em;
     }
     input{
-        width: 18em;
+        width: 100%;
         height: 2em;
     }
 }
@@ -83,71 +91,54 @@ h3{
     color: $colBlanco1;
 }
 
-// .send-button{
-//     height: 2.3em;
-//     display: flex;
-//     width: 10em;
-//     margin: 1em;
-//     border-radius: 0.2em;
-//     transition: 0.4s;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     font-size: large;
-//     background-color: $colNegro1;
-//     color: $colRoj2;
-//     font-weight: bold;
-//     font-size:large;
-//     border: 0.20em solid $colRoj2;
-// }
-// .send-button:hover {
-//     transition: 0.4s;
-//     background-color: $colNegro3;
-//     cursor: pointer;
-// }
-// .blank-button{
-//     height: 2.3em;
-//     display: flex;
-//     width: 10em;
-//     margin: 1em;
-//     border-radius: 0.2em;
-//     transition: 0.4s;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     font-size: large;
-//     background-color: $colNegro1;
-//     color: $colBlanco1;
-//     font-weight: bold;
-//     font-size:large;
-//     border: 0.20em solid $colBlanco1;
-// }
-// .blank-button:hover {
-//     transition: 0.4s;
-//     background-color: $colNegro3;
-//     cursor: pointer;
-// }
+.send-button{
+    height: 2.3em;
+    display: flex;
+    width: 70%;
+    margin: 1em;
+    border-radius: 0.2em;
+    transition: 0.4s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: medium;
+    background-color: $colNegro3;
+    color: $colBlanco1;
+    font-weight: bold;
+    font-size:large;
+    border: 0.10em solid ;
+}
+.send-button:hover {
+    transition: 0.4s;
+    background-color:  $colRosa3; 
+    cursor: pointer;
+}
 
-// .out-button{
-//     height: 2.3em;
-//     display: flex;
-//     width: 10em;
-//     margin: 1em;
-//     border-radius: 0.2em;
-//     transition: 0.4s;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     font-size: large;
-//     background-color: $colRoj2;
-//     color: $colNegro1;
-//     font-weight: bold;
-//     font-size:large;
-//     border: 0.20em solid $colRoj2;
-// }
+.out-button{
+    height: 2.3em;
+    display: flex;
+    width: 100%;
+    margin: 1em;
+    border-radius: 0.2em;
+    transition: 0.4s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: large;
+    background-color: $colRosa3;
+    color: $colBlanco1;
+    font-weight: bold;
+    font-size: small;
+    border: 0.10em solid $colBlanco1;
+}
+
+.out-button:hover {
+    transition: 0.4s;
+    background-color: $colNegro3;
+    cursor: pointer;
+}
 
 .error {
     color:  rgb(187, 0, 14);
@@ -163,12 +154,6 @@ h3{
     width: 18em;
 }
   
-
-.out-button:hover {
-    transition: 0.4s;
-    background-color: $colRoj3;
-    cursor: pointer;
-}
 
 .table-responsive {
     

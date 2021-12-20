@@ -33,6 +33,8 @@ const Login = (props) => {
 
     return (
 
+        <div className="basics_column">
+
         <div className="form">
 
             <h3>Iniciar sesión</h3>
@@ -64,8 +66,9 @@ const Login = (props) => {
             <div className="send-button" onClick={handleSubmit}>Login</div>
 
         </div>
+        </div>
     );
 
 }
 
-export default connect()(Login);
+export default (Login);

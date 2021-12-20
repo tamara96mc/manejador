@@ -7,33 +7,34 @@ import {useNavigate} from 'react-router-dom';
 
 const Profile = (props) => {
 
-    const [userData, setUserData] = useState(props.credentials.usuario);
+    // const [userData, setUserData] = useState(props.credentials.usuario);
+    const [userData, setUserData] = useState();
 
     let navigate = useNavigate();
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        setUserData(props.credentials.user);
+    //     setUserData(props.credentials.user);
 
-    }, [props.credentials]);
+    // }, [props.credentials]);
 
   
     const handleSubmit = async () => {
 
-        try {
-            let res = await axios.put(`https://api-tmc-pelis.herokuapp.com/api/${userData._id}`, userData);
-            props.dispatch({type: UPDATE_USER, payload:userData});
+        // try {
+        //     let res = await axios.put(`https://api-tmc-pelis.herokuapp.com/api/${userData._id}`, userData);
+        //     props.dispatch({type: UPDATE_USER, payload:userData});
 
-        } catch (error) {
-            console.log(error)
-        }
+        // } catch (error) {
+        //     console.log(error)
+        // }
     };
 
     const logOut = () => {
     
-        props.dispatch({ type: LOGOUT });
-        localStorage.clear();
-        navigate("/login");
+        // props.dispatch({ type: LOGOUT });
+        // localStorage.clear();
+        // navigate("/login");
     }
 
     const handleChange = (e) => {
@@ -43,6 +44,7 @@ const Profile = (props) => {
 
     
     return (
+        <div className="basics_column">
         <div className="form">
             <h3>Perfil</h3>
             <div className="form-group">
@@ -68,7 +70,7 @@ const Profile = (props) => {
                     name="password"
                     type="password"
                     placeholder="contraseña"
-                    value={userData?.password || ''}
+                    value={'******' || ''}
                     onChange={handleChange}
                 />
             </div>
@@ -77,11 +79,13 @@ const Profile = (props) => {
             <div className="out-button" onClick={logOut}>Cerrar sesión</div>
             </div>
            
-
+            </div>
         </div>
     )
 };
 
-export default connect((state) => ({
-    credentials: state.credentials
-}))(Profile);
+export default Profile;
+
+// export default connect((state) => ({
+//     credentials: state.credentials
+// }))(Profile);
